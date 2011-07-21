@@ -15,16 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\mymanagedc1\c20110712\test1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\mymanagedc1\c20110712\test2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="test3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -37,11 +37,12 @@ Case 2:
 112233445566778899 + 998877665544332211 = 1111111111111111110
 ************************************************************************/
 void addBigNum(char* addBy,char* add,char* result){
-	int addByLen,addLen,resultLen;
+	int addByLen,addLen,resultLen,increse,spart,realLong,realShort,_result,i;
+	char *theLong,*theShort;
+
 	addByLen = strlen(addBy);
 	addLen = strlen(add);
 	resultLen = strlen(result);
-	char *theLong,*theShort;
 
 	if(strlen(addBy)>strlen(add)){
 		theLong=addBy;
@@ -51,34 +52,33 @@ void addBigNum(char* addBy,char* add,char* result){
 		theShort=addBy;
 	}
 
-	int increse = 0;
-	int spart = strlen(theLong)-strlen(theShort);
-	for(int i=strlen(theLong)-1;i>spart-1;i--){
-		int realLong = theLong[i]-48;
-		int realShort = theShort[i-spart]-48;
-		int _result = realLong+realShort+increse;
+	increse = 0;
+	spart = strlen(theLong)-strlen(theShort);
+	for(i=strlen(theLong)-1;i>spart-1;i--){
+		realLong = theLong[i]-48;
+		realShort = theShort[i-spart]-48;
+		_result = realLong+realShort+increse;
 		increse =_result / 10;
 		_result %= 10;
 		result[i]=_result+48;
 	}
-	for(int i=spart-1;i>=0;i--){
-		int realLong = theLong[i]-48;
-		int _result = realLong+increse;
+	for(i=spart-1;i>=0;i--){
+		realLong = theLong[i]-48;
+		_result = realLong+increse;
 		increse =_result / 10;
 		_result %= 10;
 		result[i]=_result+48;
 	}
 }
 int main(int argc,char* argv){
-	int count;
+	int count,i;
 
-	char *addBy,*add,result[1001]={0};
+	char *addBy,*add,result[1001]={0},*p;
 
-	if(scanf("%d\n",&count)!=EOF){
-		for(int i=0;i<count;i++){
+	if(scanf_s("%d\n",&count)!=EOF){
+		for(i=0;i<count;i++){
 			char readLine[2001]={0};
-			gets(readLine);
-			char *p;
+			gets_s(readLine,2001);
 			p=strchr(readLine,' ');
 			*p='\0';
 			addBy=readLine;

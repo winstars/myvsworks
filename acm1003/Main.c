@@ -39,24 +39,24 @@ Case 2:
 7 1 6
 ************************************************************************/
 void calMaxSumOfSubArray(int arr[]){
+	int i;
 	int size = arr[0];
-	for(int i=0;i<size;i++){
+	for(i=0;i<size;i++){
 		printf("%d ",arr[i+1]);
 	}
 }
 
 int main(int argc,char* argv[]){
-	int count;
+	int count,i,j,size;
+	int nums[100000];
 	
-	if(scanf("%d\n",&count)!=EOF){
-		for(int i=0;i<count;i++){
-			int size=0;
-			scanf("%d",&size);
+	if(scanf_s("%d\n",&count)!=EOF){
+		for(i=0;i<count;i++){
+			scanf_s("%d",&size);
 			if(size>0){
-				int nums[100000];
 				nums[0]=size;
-				for(int j=0;j<size;j++){
-					scanf("%d",&nums[j+1]);
+				for(j=0;j<size;j++){
+					scanf_s("%d",&nums[j+1]);
 				}
 				calMaxSumOfSubArray(nums);
 				/*

@@ -76,9 +76,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\mymanagedc1\c20110712\test1.c" />
-    <ClCompile Include="..\..\..\mymanagedc1\c20110712\test2.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="test1.c" />
+    <ClCompile Include="test2.c" />
     <ClCompile Include="test3.c" />
   </ItemGroup>
   <ItemGroup>
